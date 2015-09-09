@@ -1,0 +1,16 @@
+<Object_Repository>
+	<PageNode name="HomePage">
+		<Object_Node name="SignUp" locator_type="LinkText" locator="Sign Up"></Object_Node>
+		<Object_Node name="LogIn" locator_type="CssSelector" locator="div.signup-left>div>span>a"></Object_Node>
+		<Object_Node name="Username" locator_type="Id" locator="signInemail"></Object_Node>
+		<Object_Node name="Password" locator_type="Id" locator="signIn-pass"></Object_Node>
+		<Object_Node name="LogInButton" locator_type="Id" locator="signin-btn"></Object_Node>
+		<Object_Node name="LogInError" locator_type="Id" locator="login-error"></Object_Node>
+		<Object_Node name="HiUser" locator_type="Id" locator="qa-my-acc-link"></Object_Node>
+		<Object_Node name="SearchBar" locator_type="Id" locator="searchInput"></Object_Node>
+		<Object_Node name="SearchButton" locator_type="Id" locator="qa-searchBtn"></Object_Node>
+	</PageNode>
+	<PageNode name="SearchPage">
+		<Object_Node name="H1Text" locator_type="Id" locator="qa-new-arrivals"></Object_Node>
+	</PageNode>
+</Object_Repository>
