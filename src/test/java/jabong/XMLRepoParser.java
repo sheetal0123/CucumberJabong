@@ -15,8 +15,7 @@ public class XMLRepoParser {
 		String locatorValue = null;
 
 		try {
-			File repoXmlFile = new File(
-					"C:\\Users\\sheetalsingh\\workspace\\CucumberTest\\JabongRepo.xml");
+			File repoXmlFile = new File("C:\\Users\\sheetalsingh\\workspace\\CucumberJabong\\JabongRepo.xml");
 
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
@@ -26,22 +25,16 @@ public class XMLRepoParser {
 			NodeList nodeList = document.getElementsByTagName("PageNode");
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Node pageNode = nodeList.item(i);
-				if ((pageNode.getAttributes().getNamedItem("name")
-						.getTextContent().toString().equalsIgnoreCase(pageName))) {
+				if ((pageNode.getAttributes().getNamedItem("name").getTextContent().toString()
+						.equalsIgnoreCase(pageName))) {
 
 					for (int j = 0; j < pageNode.getChildNodes().getLength(); j++) {
-						if (!pageNode.getChildNodes().item(j).getNodeName()
-								.toString().startsWith("#")) {
-							if (pageNode.getChildNodes().item(j).getAttributes()
-									.getNamedItem("name").getTextContent()
+						if (!pageNode.getChildNodes().item(j).getNodeName().toString().startsWith("#")) {
+							if (pageNode.getChildNodes().item(j).getAttributes().getNamedItem("name").getTextContent()
 									.toString().equalsIgnoreCase(loc)) {
-								locatorType = pageNode.getChildNodes().item(j)
-										.getAttributes()
-										.getNamedItem("locator_type")
-										.getTextContent().toString();
-								locatorValue = pageNode.getChildNodes().item(j)
-										.getAttributes()
-										.getNamedItem("locator")
+								locatorType = pageNode.getChildNodes().item(j).getAttributes()
+										.getNamedItem("locator_type").getTextContent().toString();
+								locatorValue = pageNode.getChildNodes().item(j).getAttributes().getNamedItem("locator")
 										.getTextContent().toString();
 							}
 
@@ -56,7 +49,7 @@ public class XMLRepoParser {
 			e.printStackTrace();
 		}
 
-	By locator = null;
+		By locator = null;
 
 		switch (locatorType) {
 		case "Id":

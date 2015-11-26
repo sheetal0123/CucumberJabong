@@ -17,8 +17,7 @@ Feature: Login Functionality Feature
     When user logs in using Username as "sheetal0123@gmail.com" and Password "xebia@123"
     Then "Hi, sheetal" should display on home page
 
-  @sanity
-  @positiveScenario
+  @sanity @positiveScenario
   Scenario: Search Functionality
     Given user navigates to Jabong.com
     When user searched for "shoes"

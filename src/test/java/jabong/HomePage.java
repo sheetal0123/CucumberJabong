@@ -7,7 +7,7 @@ public class HomePage {
 
 	public static void openLoginPage(WebDriver driver) {
 		driver.findElement(
-				xmlrepoparser.getByElementFromRepo("HomePage", "SignUp"))
+xmlrepoparser.getByElementFromRepo("HomePage", "Sign In"))
 				.click();
 	}
 
