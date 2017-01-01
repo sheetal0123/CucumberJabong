@@ -15,8 +15,10 @@ public class XMLRepoParser {
 		String locatorValue = null;
 
 		try {
-			File repoXmlFile = new File("C:\\Users\\sheetalsingh\\workspace\\CucumberJabong\\JabongRepo.xml");
-
+			//File repoXmlFile = new File("C:\\Users\\sheetalsingh\\workspace\\CucumberJabong\\JabongRepo.xml");
+			File repoXmlFile = new File("/Users/sheetalsingh/Documents/workspace/CucumberJabong/JabongRepo.xml");
+			
+			
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(repoXmlFile);

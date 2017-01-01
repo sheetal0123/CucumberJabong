@@ -19,7 +19,7 @@ public class StepFile {
 	public void setUp() {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 	}
 
 	@After

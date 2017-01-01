@@ -1,4 +1,4 @@
-Feature: Login Functionality Feature
+Feature: Login Functionality
   
   In order to ensure Login Functionality works,
   I want to run the cucumber test to verify it is working

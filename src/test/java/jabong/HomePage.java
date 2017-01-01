@@ -3,19 +3,20 @@ package jabong;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
+	
 	static XMLRepoParser xmlrepoparser = new XMLRepoParser();
 
 	public static void openLoginPage(WebDriver driver) {
 		driver.findElement(
-xmlrepoparser.getByElementFromRepo("HomePage", "Sign In"))
+xmlrepoparser.getByElementFromRepo("HomePage", "SignIn"))
 				.click();
 	}
 
 	public static void enterCredentials(WebDriver driver, String username,
 			String password) {
-		driver.findElement(
-				xmlrepoparser.getByElementFromRepo("HomePage", "LogIn"))
-				.click();
+//		driver.findElement(
+//				xmlrepoparser.getByElementFromRepo("HomePage", "LogIn"))
+//				.click();
 		driver.findElement(
 				xmlrepoparser.getByElementFromRepo("HomePage", "Username"))
 				.sendKeys(username);
@@ -32,7 +33,7 @@ xmlrepoparser.getByElementFromRepo("HomePage", "Sign In"))
 		driver.findElement(
 				xmlrepoparser.getByElementFromRepo("HomePage", "LogInError"))
 				.getText()
-				.contains("Email and password mismatch. Please try again");
+				.contains("Incorrect username or password.");
 
 	}
 
