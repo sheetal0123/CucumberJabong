@@ -3,6 +3,7 @@ package jabong;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
@@ -17,6 +18,7 @@ public class StepFile {
 
 	@Before
 	public void setUp() {
+		System.setProperty("webdriver.gecko.driver", "/Users/sheetalsingh/Downloads/geckodriver");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.manage().window().maximize();
